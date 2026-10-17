@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East Africa Port Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>East Africa Port Link</h1>
+    <p>Welcome to the East Africa Port Link website. Here you can find information about the ports in East Africa, their services, and how to connect with them.</p>
+    <p>Connecting ports. Moving trade forward.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#ports">Ports</a>
+        <a href="#corridors">Corridors</a>
+        <a href="#about">About</a>
+    </nav>
+    <section class="intro" id="home">
+        <h2>Smarter Regional Trade</h2>
+        <p>
+            Discover how East Africa Port Link is revolutionizing trade in the region by providing efficient port connections and services. Our platform aims to streamline logistics, reduce transit times, and enhance trade opportunities for businesses across East Africa.
+        </p>
+    </section>
+    <section class="ports" id="ports">
+        <h2>Key Regional Ports</h2>
+
+        <div class="port-grid">
+            <article class="port-card">
+                <h3>Port of Mombasa</h3>
+                <p>The Port of Mombasa is the largest port in East Africa, serving as a gateway for trade in the region. It offers modern facilities and efficient services for cargo handling.</p>
+            </article>
+
+            <article class="port-card">
+                <h3>Port of Dar es Salaam</h3>
+                <p>The Port of Dar es Salaam is a major commercial hub in Tanzania, facilitating trade between the country and international markets. It provides comprehensive services for cargo handling and logistics.</p>
+            </article>
+
+            <article class="port-card">
+                <h3>Port of Djibouti</h3>
+                <p>The Port of Djibouti serves as a critical maritime gateway for landlocked countries in the region. It offers strategic access to international shipping routes and efficient cargo handling services.</p>
+            </article>
+        </div>
+    </section>
+    <section class="corridors" id="corridors">
+        <h2> Regional Transport Corridors</h2>
+
+        <div class="port-grid">
+            <article class="port-card">
+                <h3>Northern Corridor</h3>
+                <p>
+                    Connects the Port of Mombasa to landlocked countries like Uganda, Rwanda, and South Sudan. This corridor is vital for trade and economic development in the region.
+                </p>
+            </article>
+
+            <article class="port-card">
+                <h3>Central Corridor</h3>
+                <p>
+                    Connects the Port of Dar es Salaam to landlocked countries like Burundi, Rwanda, and the Democratic Republic of Congo. It plays a crucial role in facilitating trade and commerce in East Africa.
+                </p>
+            </article>
+        </div>
+    </section>
+    <section class="tracking" id="tracking">
+        <h2>Track Your Cargo</h2>
+        <p>Check the recorded status of your shipments at any time using its container ID.</p>
+        <form id="trackingform">
+            <label for="containerId">Container ID:</label>
+            <input
+            type="text"
+            id="containerId"
+            placeholder="e.g. EAPL1234567"
+            required
+            />
+            <button type="submit">Track Shipment</button>
+        </form>
+        <div id="trackingResult"></div>
+    </section>
+    <footer id="about">
+        <p>&copy; 2023 East Africa Port Link. All rights reserved.</p>
+        <p>Connecting ports. Moving trade forward.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
