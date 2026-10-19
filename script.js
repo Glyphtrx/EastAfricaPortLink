@@ -23,11 +23,18 @@ trackingform.addEventListener("submit", function(event) {
 const shipment = shipments[containerId.toUpperCase()];
     
     if (shipment) {
-        trackingResult.innerHTML = 
-        "Status; " + shipment.status + "<br>" +
-        "Location: " + shipment.location;
+        trackingResult.innerHTML = `
+            <p><strong>Container ID:</strong> <span id="containerIdResult"></span></p>
+            <p><strong>Status:</strong> <span id="statusResult"></span></p>
+            <p><strong>Location:</strong> <span id="locationResult"></span></p>
+        `;
+       async (params) => {
+         document.getElementById("containerIdResult").textContent = containerId;
+         document.getElementById("statusResult").textContent = shipment.status;
+         document.getElementById("locationResult").textContent = shipment.location;
+       }
     } else {
-        trackingResult.innerHTML = 
-        "No shipment found for Container ID: " + containerId;
+        trackingResult.textContent = 
+        "No sampleshipment found for Container ID: " + containerId;
     }
 });
