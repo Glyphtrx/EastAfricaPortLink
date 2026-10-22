@@ -4,82 +4,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>East Africa Port Link</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>East Africa Port Link</h1>
-    <p>Welcome to the East Africa Port Link website. Here you can find information about the ports in East Africa, their services, and how to connect with them.</p>
-    <p>Connecting ports. Moving trade forward.</p>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#ports">Ports</a>
-        <a href="#corridors">Corridors</a>
-        <a href="#about">About</a>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <nav class="nav">
+        <div class="wrap">
+            <a class="brand" href="#home" aria-label="East Africa Port Link home">
+                <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#16928f"/><path d="M7 20h18l-2.5 5h-13zM11 20v-5h4v5M16 20v-8h5v8" fill="none" stroke="#04201f" stroke-width="2" stroke-linejoin="round"/></svg>
+                East Africa Port Link
+            </a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ports">Ports</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#corridors">Corridors</a></li>
+                <li><a href="#tracking">Track Cargo</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
     </nav>
-    <section class="intro" id="home">
-        <h2>Smarter Regional Trade</h2>
-        <p>
-            Discover how East Africa Port Link is revolutionizing trade in the region by providing efficient port connections and services. Our platform aims to streamline logistics, reduce transit times, and enhance trade opportunities for businesses across East Africa.
-        </p>
-    </section>
-    <section class="ports" id="ports">
-        <h2>Key Regional Ports</h2>
 
-        <div class="port-grid">
-            <article class="port-card">
-                <h3>Port of Mombasa</h3>
-                <p>The Port of Mombasa is the largest port in East Africa, serving as a gateway for trade in the region. It offers modern facilities and efficient services for cargo handling.</p>
-            </article>
-
-            <article class="port-card">
-                <h3>Port of Dar es Salaam</h3>
-                <p>The Port of Dar es Salaam is a major commercial hub in Tanzania, facilitating trade between the country and international markets. It provides comprehensive services for cargo handling and logistics.</p>
-            </article>
-
-            <article class="port-card">
-                <h3>Port of Djibouti</h3>
-                <p>The Port of Djibouti serves as a critical maritime gateway for landlocked countries in the region. It offers strategic access to international shipping routes and efficient cargo handling services.</p>
-            </article>
+    <header class="hero" id="home">
+        <div class="wrap">
+            <span class="label">Regional port coordination</span>
+            <h1>East Africa Port Link</h1>
+            <p class="lead">Welcome to the East Africa Port Link website. Here you can find information about the ports in East Africa, their services, and how to connect with them.</p>
+            <div class="ctas">
+                <a class="btn btn-primary" href="#ports">Explore the Ports</a>
+                <a class="btn btn-ghost" href="#tracking">Track a Shipment</a>
+            </div>
+            <p class="tagline">Connecting ports. Moving trade forward.</p>
         </div>
-    </section>
-    <section class="corridors" id="corridors">
-        <h2> Regional Transport Corridors</h2>
+        <svg class="yard" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of a container terminal with a ship, cranes and stacked containers">
+            <rect width="1200" height="230" style="fill:var(--hero-bg)"/>
+            <rect y="150" width="1200" height="80" fill="#0e3558"/>
+            <path d="M0 160c100-8 200 8 300 0s200 8 300 0 200 8 300 0 200 8 300 0v70H0z" fill="#12426b"/>
+            <g fill="#1d5a8a"><path d="M60 150h420l-30 34H95z"/><rect x="110" y="118" width="40" height="32"/></g>
+            <g>
+                <rect x="170" y="126" width="44" height="24" fill="#16928f"/><rect x="216" y="126" width="44" height="24" fill="#b86e00"/><rect x="262" y="126" width="44" height="24" fill="#5aaee8"/><rect x="308" y="126" width="44" height="24" fill="#c9d6e3"/><rect x="354" y="126" width="44" height="24" fill="#16928f"/>
+                <rect x="216" y="101" width="44" height="24" fill="#c9d6e3"/><rect x="262" y="101" width="44" height="24" fill="#16928f"/><rect x="308" y="101" width="44" height="24" fill="#b86e00"/>
+            </g>
+            <g stroke="#7fb2d9" stroke-width="5" fill="none"><path d="M560 190V40h200v150M560 40l-90 30M610 40v-24h100v24"/><path d="M640 40v60" stroke-width="3"/></g>
+            <rect x="620" y="100" width="40" height="22" fill="#b86e00"/>
+            <g>
+                <rect x="800" y="168" width="60" height="30" fill="#5aaee8"/><rect x="862" y="168" width="60" height="30" fill="#c9d6e3"/><rect x="924" y="168" width="60" height="30" fill="#16928f"/><rect x="986" y="168" width="60" height="30" fill="#b86e00"/><rect x="1048" y="168" width="60" height="30" fill="#5aaee8"/>
+                <rect x="862" y="136" width="60" height="30" fill="#16928f"/><rect x="924" y="136" width="60" height="30" fill="#b86e00"/><rect x="986" y="136" width="60" height="30" fill="#c9d6e3"/>
+                <rect x="924" y="104" width="60" height="30" fill="#5aaee8"/>
+            </g>
+            <rect y="198" width="1200" height="32" fill="#08192c"/>
+        </svg>
+    </header>
 
-        <div class="port-grid">
-            <article class="port-card">
-                <h3>Northern Corridor</h3>
-                <p>
-                    Connects the Port of Mombasa to landlocked countries like Uganda, Rwanda, and South Sudan. This corridor is vital for trade and economic development in the region.
-                </p>
-            </article>
+    <main id="main">
+        <section class="intro" id="overview">
+            <div class="wrap">
+                <div class="intro-card">
+                    <h2>Smarter Regional Trade</h2>
+                    <p>
+                        Discover how East Africa Port Link is revolutionizing trade in the region by providing efficient port connections and services. Our platform aims to streamline logistics, reduce transit times, and enhance trade opportunities for businesses across East Africa.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-            <article class="port-card">
-                <h3>Central Corridor</h3>
-                <p>
-                    Connects the Port of Dar es Salaam to landlocked countries like Burundi, Rwanda, and the Democratic Republic of Congo. It plays a crucial role in facilitating trade and commerce in East Africa.
-                </p>
-            </article>
-        </div>
-    </section>
-    <section class="tracking" id="tracking">
-        <h2>Track Your Cargo</h2>
-        <p>Check the recorded status of your shipments at any time using its container ID.</p>
-        <form id="trackingform">
-            <label for="containerId">Container ID:</label>
-            <input
-            type="text"
-            id="containerId"
-            placeholder="e.g. EAPL1234567"
-            required
-            />
-            <button type="submit">Track Shipment</button>
-        </form>
-        <div id="trackingResult"></div>
-    </section>
+        <section class="ports band" id="ports">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="label">Regional ports directory</span>
+                    <h2>Key Regional Ports</h2>
+                </div>
+
+                <div class="port-grid">
+                    <article class="port-card">
+                        <h3>Port of Mombasa</h3>
+                        <div class="port-country">Mombasa, Kenya</div>
+                        <div class="port-status">Regional gateway</div>
+                        <p>The Port of Mombasa is the largest port in East Africa, serving as a gateway for trade in the region. It offers modern facilities and efficient services for cargo handling.</p>
+                        <p><strong>Main corridor:</strong> Northern corridor</p>
+                        <p><strong>Key role:</strong> Gateway for cargo entering Kenya and neighbouring inland markets.</p>
+                        <div class="port-detail">
+                            <strong>Regional importance</strong>
+                            <p>Serves as a major gateway for trade in East Africa</p>
+                        </div>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Port of Dar es Salaam</h3>
+                        <div class="port-country">Dar es Salaam, Tanzania</div>
+                        <div class="port-status">Regional gateway</div>
+                        <p>The Port of Dar es Salaam is a major commercial hub in Tanzania, facilitating trade between the country and international markets. It provides comprehensive services for cargo handling and logistics.</p>
+                        <p><strong>Main corridor:</strong> Central Corridor</p>
+                        <p><strong>Key role:</strong> Connects Tanzania's port to inland markets across East and Central Africa.</p>
+                        <div class="port-detail">
+                            <strong>Regional importance</strong>
+                            <p>Key maritime gateway for trade in Tanzania and East Africa</p>
+                        </div>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Port of Djibouti</h3>
+                        <div class="port-country">Djibouti City, Djibouti</div>
+                        <div class="port-status">Regional gateway</div>
+                        <p>The Port of Djibouti serves as a critical maritime gateway for landlocked countries in the region. It offers strategic access to international shipping routes and efficient cargo handling services.</p>
+                        <p><strong>Main corridor:</strong> Ethiopia-Djibouti corridor</p>
+                        <p><strong>Key role:</strong> Connects Ethiopia's inland trade to maritime shipping through Djibouti.</p>
+                        <div class="port-detail">
+                            <strong>Regional importance</strong>
+                            <p>Strategic maritime hub for landlocked countries in East Africa</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="label">Port services</span>
+                    <h2>Port Services</h2>
+                    <p>Our ports offer a wide range of services to facilitate trade and logistics in the region. From cargo handling to customs clearance, we ensure that your shipments are processed efficiently and securely.</p>
+                </div>
+
+                <div class="sub-head">
+                    <div class="section-kicker">Regional maritime gateways</div>
+                    <h3>Ports connecting East Africa</h3>
+                    <p class="section-intro">
+                        Explore key ports in East Africa that serve as vital gateways for trade and commerce. Our ports are equipped with modern facilities and services to support the growing demands of regional and international trade.
+                    </p>
+                </div>
+
+                <div class="features">
+                    <article class="feature">
+                        <div class="feature-icon">⚓</div>
+                        <h3>Port of Mombasa</h3>
+                        <p>
+                            Located on Kenya's coast, the Port of Mombasa is the largest and busiest port in East Africa. It serves as a critical hub for trade and logistics, connecting the region to international markets.
+                        </p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon">⚓</div>
+                        <h3>Port of Dar es Salaam</h3>
+                        <p>
+                            Situated in Tanzania, the Port of Dar es Salaam is a key maritime gateway for trade in East Africa. It provides efficient cargo handling services and supports regional economic growth.
+                        </p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon">⚓</div>
+                        <h3>Port of Djibouti</h3>
+                        <p>
+                            The Port of Djibouti serves as a strategic maritime hub for landlocked countries in the region. It offers modern facilities and services to facilitate trade and logistics in East Africa.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="corridors band" id="corridors">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="label">Corridor explorer</span>
+                    <h2>Regional Transport Corridors</h2>
+                </div>
+
+                <div class="port-grid">
+                    <article class="port-card">
+                        <h3>Northern Corridor</h3>
+                        <p>
+                            Connects the Port of Mombasa to landlocked countries like Uganda, Rwanda, and South Sudan. This corridor is vital for trade and economic development in the region.
+                        </p>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Central Corridor</h3>
+                        <p>
+                            Connects the Port of Dar es Salaam to landlocked countries like Burundi, Rwanda, and the Democratic Republic of Congo. It plays a crucial role in facilitating trade and commerce in East Africa.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tracking" id="tracking">
+            <div class="wrap">
+                <div class="track-panel">
+                    <span class="label">Cargo tracking portal</span>
+                    <h2>Track Your Cargo</h2>
+                    <p>Check the recorded status of your shipments at any time using its container ID.</p>
+                    <form id="trackingform">
+                        <label for="containerId">Container ID:</label>
+                        <input
+                        type="text"
+                        id="containerId"
+                        placeholder="e.g. EAPL1234567"
+                        required
+                        />
+                        <button type="submit" class="btn btn-primary">Track Shipment</button>
+                    </form>
+                    <div id="trackingResult">
+                        <div class="shipment-card">
+                            <p class="result-label">CONTAINER ID:</p>
+                            <h3 id="containerIdResult"></h3>
+                            <p class="result-label">STATUS:</p>
+                            <p id="statusResult"></p>
+                            <p class="result-label">LOCATION:</p>
+                            <p id="locationResult"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer id="about">
-        <p>&copy; 2023 East Africa Port Link. All rights reserved.</p>
-        <p>Connecting ports. Moving trade forward.</p>
+        <div class="wrap">
+            <p>&copy; 2026 East Africa Port Link. All rights reserved.</p>
+            <p>Connecting ports. Moving trade forward.</p>
+        </div>
     </footer>
+
     <script src="script.js"></script>
+    <script>
+    /* highlight the nav link for the section currently in view */
+    (function () {
+        if (!("IntersectionObserver" in window)) return;
+        var links = document.querySelectorAll(".nav ul a");
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    links.forEach(function (a) {
+                        a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+        document.querySelectorAll("header[id], section[id]").forEach(function (s) { io.observe(s); });
+    })();
+    </script>
 </body>
 </html>
