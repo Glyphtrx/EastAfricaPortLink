@@ -25,6 +25,7 @@
                 <li><a href="#corridors">Corridors</a></li>
                 <li><a href="#tracking">Track Cargo</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#inspections">Inspections</a></li>
             </ul>
         </div>
     </nav>
@@ -84,7 +85,7 @@
                         <h3>Port of Mombasa</h3>
                         <div class="port-country">Mombasa, Kenya</div>
                         <div class="port-status">Regional gateway</div>
-                        <p>The Port of Mombasa is the largest port in East Africa, serving as a gateway for trade in the region. It offers modern facilities and efficient services for cargo handling.</p>
+                        <p>The Port of Mombasa is Kenya's principal seaport, serving as a gateway for trade in the region. It offers efficient services for cargo handling.</p>
                         <p><strong>Main corridor:</strong> Northern corridor</p>
                         <p><strong>Key role:</strong> Gateway for cargo entering Kenya and neighbouring inland markets.</p>
                         <div class="port-detail">
@@ -117,6 +118,41 @@
                             <strong>Regional importance</strong>
                             <p>Strategic maritime hub for landlocked countries in East Africa</p>
                         </div>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Lamu Port</h3>
+                        <div class="port-country">Lamu, Kenya</div>
+                        <div class="port-status">Emerging port</div>
+                        <p>Lamu Port is an emerging facility in Kenya, aiming to become a significant maritime hub for the region.</p>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Port of Tanga</h3>
+                        <div class="port-country">Tanga, Tanzania</div>
+                        <div class="port-status">Regional port</div>
+                        <p>The Port of Tanga is a regional port in Tanzania, providing essential services for cargo handling and trade in the northern part of the country.</p>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Port of Mtwara</h3>
+                        <div class="port-country">Mtwara, Tanzania </div>
+                        <div class="port-status">Regional port</div>
+                        <p>The Port of Mtwara is a regional port in southern Tanzania, supporting trade and logistics in the area. It is strategically located to facilitate trade with neighboring countries.</p>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Port of Mogadishu</h3>
+                        <div class="port-country">Mogadishu, Somalia</div>
+                        <div class="port-status">Regional port</div>
+                        <p>The Port of Mogadishu is a key maritime facility in Somalia, playing a vital role in the country's trade and logistics. It provides essential services for cargo handling and supports regional commerce.</p>
+                    </article>
+
+                    <article class="port-card">
+                        <h3>Port of Sudan</h3>
+                        <div class="port-country">Sudan</div>
+                        <div class="port-status">Regional port</div>
+                        <p>The Port of Sudan is a major maritime gateway for trade in Sudan, facilitating the movement of goods and services. It offers comprehensive cargo handling services and supports regional trade activities.</p>
                     </article>
                 </div>
             </div>
@@ -174,16 +210,31 @@
                 <div class="port-grid">
                     <article class="port-card">
                         <h3>Northern Corridor</h3>
-                        <p>
-                            Connects the Port of Mombasa to landlocked countries like Uganda, Rwanda, and South Sudan. This corridor is vital for trade and economic development in the region.
-                        </p>
+                        <div class="port-country">Anchored by the Port of Mombasa</div>
+                        <p>Runs through Nairobi and Malaba/Busia. Serves Uganda, Rwanda, Burundi and South Sudan.</p>
+                        <div class="port-detail">
+                            <strong>Weighbridges</strong>
+                            <ul class="checkpoints">
+                                <li>Mariakani</li>
+                                <li>Athi River (Mlolongo)</li>
+                                <li>Gilgil</li>
+                                <li>Webuye/Busia</li>
+                            </ul>
+                        </div>
                     </article>
 
                     <article class="port-card">
                         <h3>Central Corridor</h3>
-                        <p>
-                            Connects the Port of Dar es Salaam to landlocked countries like Burundi, Rwanda, and the Democratic Republic of Congo. It plays a crucial role in facilitating trade and commerce in East Africa.
-                        </p>
+                        <div class="port-country">Anchored by the Port of Dar es Salaam</div>
+                        <p>Runs through central Tanzania. Serves Burundi, Rwanda, and the Democratic Republic of Congo.</p>
+                        <div class="port-detail">
+                            <strong>Weighbridges</strong>
+                            <ul class="checkpoints">
+                                <li>Vigwaza</li>
+                                <li>Nyakanazi</li>
+                                <li>Manyoni</li>
+                            </ul>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -218,9 +269,140 @@
                 </div>
             </div>
         </section>
+        <section class="inspection band" id="inspections">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="label">Inspection and record keeping</span>
+                    <h2>Container Inspection Records</h2>
+                    <p>An authorized port official records each inspection, and cargo owners can access these records for compliance and tracking purposes. Records are kept in this browser tab and are not saved or shared</p>
+                </div>
+
+                <div class="insp-layout">
+                    <form id="inspForm" class="insp-form" novalidate>
+                        <div class="field">
+                            <label for="iContainer">Container number *</label>
+                            <input id="iContainer" type="text" placeholder="e.g. EAPL1234567" required>
+                            <small class="err"></small>
+                        </div>
+                        <div class="field">
+                            <label for="iLocation">Inspection location *</label>
+                            <select id="iLocation">
+                                <option value="">Select a location</option>
+                                    <option>Port of Mombasa</option>
+                                    <option>Port of Dar es Salaam</option>
+                                    <option>Mariakani</option>
+                                    <option>Athi River (Mlolongo)</option>
+                                    <option>Gilgil</option>
+                                    <option>Webuye/Busia</option>
+                                    <option>Vigwaza</option>
+                                    <option>Nyakanazi</option>
+                                    <option>Manyoni</option>
+                            </select>
+                            <small class="err"></small>
+                        </div>
+                        <div class="field">
+                            <label for="iDate">Date and time *</label>
+                            <input id="iDate" type="datetime-local" required>
+                            <small class="err"></small>
+                        </div>
+                        <div class="field">
+                            <label for="iStatus">Inspection status *</label>
+                            <select id="iStatus">
+                                <option value="">Select a status</option>
+                                <option>Passed</option>
+                                <option>Passed with remarks</option>
+                                <option>Held for further inspection</option>
+                                <option>Failed</option>
+                            </select>
+                            <small class="err"></small>
+                        </div>
+                        <div class="field">
+                            <label for="iCondition">Cargo condition *</label>
+                            <select id="iCondition">
+                                <option value="">Select a condition</option>
+                                <option>Good</option>
+                                <option>Minor Damage</option>
+                                <option>Damaged</option>
+                                <option>Leaking</option>
+                                <option>Contaminated</option>
+                            </select>
+                            <small class="err"></small>
+                        </div>
+                        <div class="field">
+                            <label for="iQuantity">Quantity and quality *</label>
+                            <input id="iQuantity" type="text" placeholder="e.g. 480 bags grade A">
+                            <small class="err"></small>
+                        </div>
+                        <div class="field full">
+                            <label for="iOfficer">Officer or agency responsible *</label>
+                            <input id="iOfficer" type="text" placeholder="e.g. John Doe, Customs Department">
+                            <small class="err"></small>
+                        </div>
+                        <div class="field full">
+                            <label for="iNotes">Notes or remarks</label>
+                            <textarea id="iNotes" rows="3"></textarea>
+                        </div>
+                        <div class="full">
+                            <button type="submit" class="btn btn-primary">Save record</button>
+                        </div>
+                        <p id="iSuccess" class="insp-success" hidden>Record saved successfully!</p>
+                    </form>
+
+                    <div class="insp-timeline">
+                        <h3>Activity timeline</h3>
+                        <ul id="iTimeline"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about band" id="about">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="label">About the project</span>
+                    <h2>Improving Regional Coordination in the East African Ports</h2>
+                </div>
+
+                <div class="statement-grid">
+                    <div class="statement">
+                        <span class="label">Research problem</span>
+                        <p>Coordination and logistics inefficiency in East African ports hinder the seamless movement of goods and increase operational costs.</p>
+                    </div>
+                </div>
+
+                <h3 class="about-sub">Specific objectives</h3>
+                <div class="port-grid">
+                    <article class="port-card">
+                        <span class="big-num">1</span>
+                        <h3>Custom clearance</h3>
+                        <p>Streamline the customs clearance process to reduce delays and improve efficiency.</p>
+                    </article>
+                    <article class="port-card">
+                        <span class="big-num">2</span>
+                        <h3> Cost and time</h3>
+                        <p>Minimize the cost and time associated with cargo handling and transportation.</p>
+                    </article>
+                    <article class="port-card">
+                        <span class="big-num">3</span>
+                        <h3>Data sharing</h3>
+                        <p>Enhance data sharing and communication among stakeholders to improve decision-making.</p>
+                    </article>
+                    <article class="port-card">
+                        <span class="big-num">4</span>
+                        <h3>Corridor management</h3>
+                        <p>Implement effective corridor management strategies to optimize the flow of goods and reduce congestion.</p>
+                    </article>
+                </div>
+
+                <h3 class="about-sub">Research questions</h3>
+                <ol class="questions">
+                    <li>How can resources be managed to benefit the regional transport corridors?</li>
+                    <li>How can coordination, logistics, and information systems be improved to enhance the efficiency of port operations?</li>
+                </ol>
+            </div>
+        </section>
     </main>
 
-    <footer id="about">
+    <footer>
         <div class="wrap">
             <p>&copy; 2026 East Africa Port Link. All rights reserved.</p>
             <p>Connecting ports. Moving trade forward.</p>

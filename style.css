@@ -643,7 +643,212 @@ section {
     color: var(--fg);
 }
 
+track-insp {
+    margin: 6px 0 0;
+    padding-left: 18px;
+    color: var(--fg);
+}
+
+.track-insp li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* ---------- About ---------- */
+
+.statement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 20px;
+}
+
+.statement {
+    padding: 24px 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.statement p {
+    margin-top: 10px;
+    color: var(--fg);
+    font-size: 1.1rem;
+}
+
+.about-sub {
+    margin: 40px 0 18px;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.big-num {
+    margin-bottom: 4px;
+    color: var(--accent);
+    font: 700 3rem/1 var(--font-display);
+}
+
+.questions {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: q;
+}
+
+.questions li {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--fg);
+    counter-increment: q;
+}
+
+.questions li::before {
+    content: "Q" counter(q);
+    color: var(--teal-t);
+    font: 700 1.9rem/1 var(--font-display);
+}
+
+/* ---------- Inspections ---------- */
+
+.insp-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.insp-form,
+.insp-timeline {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.insp-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.insp-form .full { grid-column: 1/ -1; }
+
+@media (max-width: 560px) {
+    .insp-form { grid-template-columns: 1fr; }
+    }
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--fg);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    background: var(--surface);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: 400 0.95rem var(--font-body);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: 3px solid var(--teal);
+    outline-offset: 1px;
+}
+
+.field.bad input,
+.field.bad select,
+.field.bad textarea { border-color: #b3372f; }
+
+.err {
+    display: block;
+    min-height: 1em;
+    margin-top: 4px;
+    color: #b3372f;
+    font-size: 0.8rem;
+}
+
+.insp-success {
+    grid-column: 1/ -1;
+    margin: 0;
+    padding: 10px 14px;
+    border: 1px solid var(--teal);
+    border-radius: 8px;
+    background: var(--surface2);
+    color: var(--fg);
+}
+
+.insp-timeline h3 { margin-bottom: 16px; }
+
+#iTimeline {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#iTimeline li {
+    padding: 0 0 18px 22px;
+    border-left: 2px solid var(--line);
+    position: relative;
+}
+
+#iTimeline li::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 3px solid var(--teal);
+}
+
+#iTimeline .when {
+    color: var(--muted);
+    font: 500 0.75rem/1 var(--font-mono);
+}
+
+#iTimeline strong { display: block; color: var(--fg);}  
+#iTimeline small { color: var(--muted); }
 /* ---------- Footer ---------- */
+
+.checkpoints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.checkpoints li {
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface2);
+    color: var(--fg);
+    font-size: 0.85rem;
+}
 
 footer {
     padding-block: 28px;
@@ -721,3 +926,8 @@ footer p:last-child {
         transition: none !important;
     }
 }
+
+#trackingResult {
+    overflow-anchor: none;
+}
+
